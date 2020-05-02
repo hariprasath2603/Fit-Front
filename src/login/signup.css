@@ -1,0 +1,121 @@
+/* input[type="text"],input[type="password"],input[type='email'],input[type='tel'],input[type='number']{
+    display: block;
+    align-items: center;
+    margin-right: auto;
+    padding-inline-start: 2%;
+    margin-top: 2%;
+    margin-left: auto;
+    border:none;
+    border-bottom: 2px rgba(26,164,163,0.3) solid;
+}
+
+input[type="text"]:focus,input[type="password"]:focus,input[type='email']:focus,input[type='tel']:focus,input[type='number']:focus,select:focus{
+    border-bottom: 2px rgba(26,164,163,1) solid;
+    outline: none ;
+
+
+}
+
+input[type='submit']{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+form{
+    padding:2% 0;
+    width:90%;
+    text-align: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2{
+    color: rgb(45, 55, 72) ;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 0;
+
+}
+
+input[type='submit']{
+    background-color: #1aa4a3;
+    width:92%;
+    height: 7vh;
+    padding:0;
+    outline: none;
+    border: none;
+    margin-top: 2vh;
+    color: white;
+    border-radius: 2%;
+}
+
+#done{
+    margin-top: 6vh;
+}
+#cancel{
+
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    color: rgba(26,164,163,1);
+    border-color: rgba(26,164,163,1);
+}
+select{
+    
+    width:92%;
+    border:none;
+    border-bottom: 2px rgba(26,164,163,0.3) solid;
+}
+
+option[value=""][disabled] {
+    display: none;
+  }
+
+#doesNotMatch{
+    color:#aeafb0;
+    margin: 2vh 0;
+}
+
+input[type="radio"]{
+    background-color: white;
+    color:red;
+    display: inline-block;
+
+}
+
+#bdaycover{
+    text-align: left;
+}
+
+#bdaycover label{
+width:35%;
+}
+
+input[type="date"]{
+display:inline;
+width:65%;
+margin-left: 5%;
+height:5vh;
+padding-inline-start: 5%;
+border: none;
+}
+
+label{
+text-align: left;
+margin-left: 4%;
+}
+
+#next{
+    margin-top: 5vh;
+}
+
+@media only screen and (max-width: 600px) {
+    input[type="text"],input[type="password"],input[type='email'],input[type='tel'],input[type='number'],select{
+        margin-top: 3vh;
+        width: 90%;
+        height: 7vh;
+        
+    }
+  } */

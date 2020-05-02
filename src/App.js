@@ -10,6 +10,7 @@ import History from './dashbord/history';
 import Goal from './goal/goal';
 import Dashbord from './dashbord/dashbord';
 import Test from './dashbord/test';
+import Login from './login/login';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
+      <Route path="/login"><Login /></Route>
       <Route path="/signup"><Signup /></Route>
       <Route path="/signup2"><Signup2/></Route>
       <Route path='/timer'><Timer /></Route>

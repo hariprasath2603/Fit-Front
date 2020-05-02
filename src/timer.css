@@ -1,4 +1,4 @@
-#timerWrap{
+/* #timerWrap{
     text-align: center;
     width:70%;
     margin-left: auto;
@@ -11,11 +11,12 @@
 
 .timerSection h1{
     margin-bottom: 1vh;
-}
+} */
 .timerSection p{
-    font-size: 2rem;
+    /* font-size: 2rem;
     margin-top: 0px;
-    padding-bottom: 4vh;
+    */
+    padding-bottom: 3em;
     border-bottom: 2px #1aa4a3 solid;
 }
 

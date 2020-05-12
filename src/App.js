@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
-import NavBar from './nav';
+import NavBar from './nav/nav';
 import Timer from './timer';
 import Signup from "./login/signup";
 import Signup2 from './login/signup2';

@@ -64,11 +64,11 @@ class Signup2 extends Component {
             </div>
 
             <div class="form-group">
-            <Link to="/signup2"><input type="submit" className="btn btn-outline-info col-12" value="Cancel" id='cancel'/></Link>
+            <Link to="/signup2"><input type="submit" className="btn btn-outline-primary col-12" value="Cancel" id='cancel'/></Link>
             </div>
 
             <div class="form-group">
-            <Link to="/signup2"><input type="submit"  className="btn btn-info col-12" id="next"value="Next"/></Link>
+            <Link to="/signup2"><input type="submit"  className="btn btn-primary col-12" id="next"value="SignUp"/></Link>
             {/* <input type="submit" id="done" value="Done"/> */}
             </div>   
             </form>

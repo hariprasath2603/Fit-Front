@@ -109,22 +109,27 @@ constructor(){
     
     render() { 
         return ( 
-            <div id='timerWrap' className="container col-lg-4 text-center mt-4">
-                <div id="time" className="timerSection pt-sm-2 pt-lg-5">
+            <div className='text-center container col-lg-3 center-block'>
+            <div id='timerWrap' className="row text-center mt-4 mx-auto" >
+                <div id="time" className="card mt-3 p-3 col-sm-12  pt-lg-5 " style={{'border-bottom':'5px solid #3f6ad8'}}>
                     <h3>Time</h3>
                     <p className="font-weight-bold">{this.state.hour>9?this.state.hour:`0${this.state.hour}`}:{this.state.minutes>9?this.state.minutes:`0${this.state.minutes}`}:{this.state.seconds>9?this.state.seconds:`0${this.state.seconds}`}</p>
                 </div>
-                <div id="distance" className="timerSection  pt-sm-2 pt-lg-5 ">
+                <div id="distance" className="card mt-3 p-3 col-sm-12  pt-lg-5 " style={{'border-bottom':'5px solid #f7b924'}}>
                     <h3>Distance</h3>
                     <p className="font-weight-bold">{this.state.distance} KM</p>
                 </div>
-
-                <div id="speed" className="timerSection pt-sm-2 pt-lg-5 ">
+                
+                
+                <div id="speed" className="card mt-3 p-3 col-sm-12 pt-lg-5" style={{'border-bottom':'5px solid #d92550'}}>
                     <h3>Average Speed</h3>
                     <p className="font-weight-bold">{Math.floor(this.state.avgSpeed)} km/min</p>
                 </div>
 
-               <img src={this.state.img} width="70px" height="70px" onClick={this.toggelImg}alt="Play" className="mb-3"/>
+               {/* <img src={this.state.img} width="70px" height="70px" onClick={this.toggelImg}alt="Play" className="mb-3"/> */}
+              </div>
+               <a href="#" onClick={this.toggelImg} class="btn mt-3  btn-primary">Stop</a>
+
             </div>
          );
     }

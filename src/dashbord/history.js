@@ -9,21 +9,30 @@ class History extends Component {
                 tripDist:20,
                 tripDate:"06/12/20",
                 TripTime:"30",
+                avgSpeed:'30',
+                calores:300
+
               },
               {  tripName:"Trip 2",
                 tripDist:40,
                 tripDate:"07/12/20",
                 TripTime:"30",
+                avgSpeed:'30',
+                calores:300
               },
               {  tripName:"Trip 3",
                 tripDist:20,
                 tripDate:"08/12/20",
                 TripTime:"30",
+                avgSpeed:'30',
+                calores:300
               },
               {  tripName:"Trip 4",
                 tripDist:20,
                 tripDate:"09/12/20",
                 TripTime:"31",
+                avgSpeed:'30',
+                calores:300
               }
     
             ]
@@ -31,9 +40,21 @@ class History extends Component {
      }
     render() { 
         return ( 
-            <div className="container">
+            <div className="container mt-2">
                 <h2>History</h2>
-                  <div className="container">{this.state.trips.map(e=> <HistoryItem trip={e}/>)}</div>
+                <table className='table table-responsive table-striped text-center mt-2'>
+                  <thead>
+                  <tr>
+                    <th>Trip Name</th>
+                    <th>Date</th>
+                    <th>Disatance</th>
+                    <th>Duration</th>
+                    <th>Average speed</th>
+                    <th>Calores burnt</th>
+                  </tr>
+                  </thead>
+                  <tbody className="">{this.state.trips.map(e=> <HistoryItem trip={e}/>)}</tbody>
+                </table>
             </div>
          );
     }

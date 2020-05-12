@@ -69,7 +69,7 @@ class Signup extends Component {
                 <input type="tel" class="form-control" id="phoneno" aria-describedby="Phone no" />
                 {/* <small id="doesNotMatch" class="form-text text-danger">Password does not match</small> */}
                 </div>
-                <Link to="/signup2"><input type="submit"  className="btn btn-outline-primary col-12"id="next"value="Next"/></Link>
+                <Link to="/signup2"><input type="submit"  className="btn btn-primary col-12"id="next"value="Next"/></Link>
                 
                 </form>
                 </div>

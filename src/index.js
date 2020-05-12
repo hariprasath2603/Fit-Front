@@ -4,8 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min'
-
+ import 'bootstrap/dist/js/bootstrap.bundle.min'
+import "./assets/vendor/nucleo/css/nucleo.css";
+import "./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css";
+// import "assets/css/argon-dashboard-react.css";
+import './assets/css/argon-dashboard-react.css'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -11,6 +11,7 @@ import Goal from './goal/goal';
 import Dashbord from './dashbord/dashbord';
 import Test from './dashbord/test';
 import Login from './login/login';
+import Home from './dashbord/home';
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
+        <Route exact path="/"><Home /></Route>
       <Route path="/login"><Login /></Route>
       <Route path="/signup"><Signup /></Route>
-      <Route path="/signup2"><Signup2/></Route>
+      {/* <Route path="/signup2"><Signup2/></Route> */}
       <Route path='/timer'><Timer /></Route>
       <Route path="/history"> <History /></Route>
       <Route path="/goal"> <Goal /></Route>

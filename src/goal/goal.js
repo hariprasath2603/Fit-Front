@@ -15,25 +15,25 @@ const Goal = () => {
             <h3 className="mt-3 mb-3 display-5">Daily goal</h3>
 
            <div class="form-group input-group">
-            <input type="text" class="form-control"  placeholder="Distance"   id="distanceGoal" aria-label="Text input with dropdown button" />
-            <div class="input-group-append">
+            <input type="text" class="form-control"  placeholder="Distance in Km"   id="distanceGoal" aria-label="Text input with dropdown button" />
+            {/* <div class="input-group-append">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropDist">Distance</button>
                 <div class="dropdown-menu">
                 <option class="dropdown-item" onClick={(e)=>distance(e,"Km")} value="">KM</option>
                 <option class="dropdown-item" onClick={(e)=>distance(e," M ")} value="">M</option>                
                 </div>
-            </div>
+            </div> */}
             </div>
 
             <div class="form-group input-group">
-            <input type="text" class="form-control"  placeholder="Time" id="timeGoal" aria-label="Text input with dropdown button" />
-            <div class="input-group-append">
+            <input type="text" class="form-control"  placeholder="Time in hours" id="timeGoal" aria-label="Text input with dropdown button" />
+            {/* <div class="input-group-append">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropTime">     Time     </button>
                 <div class="dropdown-menu">
                 <option class="dropdown-item"  onClick={(e)=>time(e,"Hr")} value="">Hr</option>
                 <option class="dropdown-item"  onClick={(e)=>time(e,"Min")} value="">Min</option>                
                 </div>
-            </div>
+            </div> */}
             </div>
 
             

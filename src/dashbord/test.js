@@ -234,14 +234,14 @@ options: options
   render() {
     return (
       <div className={classes.graphContainer + " container bg-gradient-default"} >
-        <div class="card   bg-gradient-default">
-          <div class="card-header bg-defalut" style={{'padding':"0"}}>
-            <h5 class="h3 text-white mb-0 bg-default">Daily Fit </h5>
+        <div className="card   bg-gradient-default">
+          <div className="card-header bg-defalut" style={{'padding':"0"}}>
+            <h5 className="h3 text-white mb-0 bg-default">Daily Fit </h5>
           </div>
 
-          <div class="card-body bg-gradient-default">
-            <div class=" ">
-              {/* <canvas id="chart-bars myChart" class="chart-canvas" ref={this.chartRef}></canvas> */}
+          <div className="card-body bg-gradient-default">
+            <div className=" ">
+              {/* <canvas id="chart-bars myChart" className="chart-canvas" ref={this.chartRef}></canvas> */}
               <canvas id="myChart" className="text-white" ref={this.chartRef} />
             </div>
           </div>

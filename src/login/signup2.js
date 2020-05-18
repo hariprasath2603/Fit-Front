@@ -9,26 +9,27 @@ class Signup2 extends Component {
         bmi:0
     }
 
-    bmi = (e)=>{
-        const weight=document.getElementById('weight').value;
-        const height=document.getElementById('height').value
-        const bmi= weight/Math.pow(height,2) * 10000
-        let bmidisp = document.getElementById("bmi");
-        let disp = "BMI - "+ (bmi.toString())
-        console.log(disp);
-        bmidisp.value=disp;
-    }
+    // bmi = (e)=>{
+    //     const weight=document.getElementById('weight').value;
+    //     const height=document.getElementById('height').value
+    //     const bmi= weight/Math.pow(height,2) * 10000
+    //     let bmidisp = document.getElementById("bmi");
+    //     let disp = "BMI - "+ (bmi.toString())
+    //     console.log(disp);
+    //     bmidisp.value=disp;
+    // }
 
     onsubmit = (e)=>{
         e.preventDefault();
     }
 
     render() { 
+        console.log(this.props)
         return (  
 
             <div className="container">
             
-            <form className="card container shadow-sm mt-3 col-lg-4 p-3 mb-5 bg-white rounded">
+            <div className="card container shadow-sm mt-3 col-lg-4 p-3 mb-5 bg-white rounded">
 
              <div class="form-group">   
             <h5 className="" >Personal info</h5>
@@ -37,29 +38,37 @@ class Signup2 extends Component {
 
             <div class="form-group">
             {/* <label for="Name">Name</label> */}
-            <input type="number" class="form-control" name="weight" id="weight" placeholder="Weight in KG" aria-describedby="Weight" />
+            <input type="number" class="form-control" name="weight" onChange={this.props.onChange} id="weight" placeholder="Weight in KG" aria-describedby="Weight" />
             {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
             </div>
             
 
             <div class="form-group">
             {/* <label for="Name">Name</label> */}
-            <input type="number" name="height" class="form-control" id="height"placeholder="Height in Meters" onKeyUp={this.bmi}/>
+            <input type="number" name="height" class="form-control"onChange={this.props.onChange} id="height"placeholder="Height in Meters" onKeyUp={this.bmi}/>
 
             {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
             </div>
 
             <div class="form-group">
-            <select name="plan" class="form-control" id="plan">
+            <select name='fitPlan' onChange={this.props.onChange} class="form-control" id="fitPlan">
                 <option value="" disabled selected>Fitness plan</option>
-                    <option value="WeightLoss">Weight Loss</option>
-                    <option value="Maintain">Maintain</option>
+                    <option value="Weight Loss">Weight Loss</option>
+                    <option default value="Maintain">Maintain</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+            <select onChange={this.props.onChange} name='gender' class="form-control" id="gender">
+                <option value="" disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option default value="Female">Female</option>
                 </select>
             </div>
             
             <div class="form-group">
                 <label for="dob">Date of birth</label>
-                <input type="date" class="form-control" id="dob" aria-describedby="Date of birth" />
+                <input type="date"onChange={this.props.onChange} name='dob' class="form-control" id="dob" aria-describedby="Date of birth" />
                 {/* <small id="doesNotMatch" class="form-text text-danger">Password does not match</small> */}
             </div>
 
@@ -68,10 +77,10 @@ class Signup2 extends Component {
             </div>
 
             <div class="form-group">
-            <Link to="/signup2"><input type="submit"  className="btn btn-primary col-12" id="next"value="SignUp"/></Link>
+            <button onClick={e=>{this.props.onSignUp(e)}} className="btn btn-primary col-12" id="next" value="SignUp">SignUp</button>
             {/* <input type="submit" id="done" value="Done"/> */}
             </div>   
-            </form>
+            </div>
             </div>
 
 

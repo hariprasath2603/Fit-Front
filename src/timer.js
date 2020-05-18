@@ -59,7 +59,7 @@ constructor(){
         }
     
         const time = (this.state.hour*60+this.state.minutes);
-        const avgSpeed = time!=0 ?distance/time:0
+        const avgSpeed = time!==0 ?distance/time * 60:0
         this.setState({location:[...this.state.location,{
             latitude:coords.latitude,
             longitude:coords.longitude,
@@ -73,7 +73,7 @@ constructor(){
 
 
     distance(lat1, lon1, lat2, lon2,distance) {
-        if ((lat1 == lat2) && (lon1 == lon2)) {
+        if ((lat1 === lat2) && (lon1 === lon2)) {
             return distance;
         }
         else {
@@ -123,7 +123,7 @@ constructor(){
                 
                 <div id="speed" className="card mt-3 p-3 col-sm-12 pt-lg-5" style={{'border-bottom':'5px solid #d92550'}}>
                     <h3>Average Speed</h3>
-                    <p className="font-weight-bold">{Math.floor(this.state.avgSpeed)} km/min</p>
+                    <p className="font-weight-bold">{Math.floor(this.state.avgSpeed)} km/hr</p>
                 </div>
 
                {/* <img src={this.state.img} width="70px" height="70px" onClick={this.toggelImg}alt="Play" className="mb-3"/> */}

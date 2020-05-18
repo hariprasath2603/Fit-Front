@@ -10,7 +10,8 @@
     transition: 0.5s;
     padding-top: 2em;
   }
-  li  a a{
+  li   a{
+    font-size: 1em;
       border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
   }
 
@@ -20,7 +21,7 @@
   ul { padding:0 } 
 
   .sidenav a {
-    padding: 8px 8px 0px 0px;
+    padding: 1.5em 8px 0.5em 10px;
     text-decoration: none;
     font-size: 1.2em;
     display: block;

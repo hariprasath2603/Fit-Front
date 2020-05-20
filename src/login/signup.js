@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Signup2 from './signup2';
 import Signup1 from './signup1';
 import variable from '../config';
-
+import { Redirect } from "react-router-dom";
+import {signUpUser} from '../api/api'
 const {baseURL} = variable;
 
 class Signup extends Component {
@@ -14,21 +15,22 @@ class Signup extends Component {
         "weight":0,
         "height":0,
         "fitPlan":"",
-        "dob":""
+        "dob":"",
+        'gender':''
      }
 
      onSignUp = async(e)=>{
          e.preventDefault();
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(this.state)
-        };
-        const response = await fetch(`${baseURL}/v0/user/goal`, requestOptions);
-        console.log(await response.json())
-     }
-
-     onValueUpdate =(e)=>{
+        const { name,email,password,phoneNo,weight,height,fitPlan,dob,gender} =  this.state;
+        if(!name|| !email|| !password|| !phoneNo|| !weight|| !height|| !fitPlan|| !dob|| !gender){
+            alert("all fileds are required")
+        }
+        else{
+            signUpUser(this.state)
+        }
+     } 
+            
+        onValueUpdate =(e)=>{
          const {name,value} = e.target
          if(name === 'weight' || name==='height')
          this.setState({
@@ -42,6 +44,7 @@ class Signup extends Component {
         console.log(this.state)
      }
     render() { 
+        if(localStorage.getItem('access_token'))return <Redirect to="/dashbord" />
         console.log(baseURL)
         return (  
             <div>

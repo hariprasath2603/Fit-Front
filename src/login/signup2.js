@@ -72,14 +72,17 @@ class Signup2 extends Component {
                 {/* <small id="doesNotMatch" class="form-text text-danger">Password does not match</small> */}
             </div>
 
-            <div class="form-group">
-            <Link to="/signup2"><input type="submit" className="btn btn-outline-primary col-12" value="Cancel" id='cancel'/></Link>
-            </div>
 
             <div class="form-group">
             <button onClick={e=>{this.props.onSignUp(e)}} className="btn btn-primary col-12" id="next" value="SignUp">SignUp</button>
             {/* <input type="submit" id="done" value="Done"/> */}
-            </div>   
+            </div>
+
+            <div class="form-group">
+            <Link to="/login"><button className="btn btn-outline-primary col-12" value="Login" id='login'>Login</button></Link>
+            </div>
+
+
             </div>
             </div>
 

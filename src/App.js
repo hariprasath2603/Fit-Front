@@ -12,6 +12,7 @@ import Dashbord from './dashbord/dashbord';
 import Test from './dashbord/test';
 import Login from './login/login';
 import Home from './dashbord/home';
+import NotFound from './404';
 
 function App() {
   return (
@@ -26,9 +27,10 @@ function App() {
       {/* <Route path="/signup2"><Signup2/></Route> */}
       <Route path='/timer'><Timer /></Route>
       <Route path="/history"> <History /></Route>
-      <Route path="/goal"> <Goal /></Route>
+      <Route path="/update"> <Goal /></Route>
       <Route path="/dashbord"> <Dashbord /></Route>
       <Route path="/test"> <Test /></Route>
+      <Route ><NotFound /></Route>
       </Switch>
     </div>
     

@@ -148,7 +148,7 @@ constructor(){
 
     
     render() { 
-        // if(!localStorage.getItem('access_token'))return <Redirect to="/login" />
+        if(!localStorage.getItem('access_token'))return <Redirect to="/login" />
         return ( 
             <div className='text-center container col-lg-3 center-block'>
             <div id='timerWrap' className="row text-center mt-4 mx-auto" >

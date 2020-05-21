@@ -22,14 +22,14 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/"><Home /></Route>
-      <Route path="/login"><Login /></Route>
-      <Route path="/signup"><Signup /></Route>
+      <Route exact path="/login"><Login /></Route>
+      <Route  exact path="/signup"><Signup /></Route>
       {/* <Route path="/signup2"><Signup2/></Route> */}
-      <Route path='/timer'><Timer /></Route>
-      <Route path="/history"> <History /></Route>
-      <Route path="/update"> <Goal /></Route>
-      <Route path="/dashbord"> <Dashbord /></Route>
-      <Route path="/test"> <Test /></Route>
+      <Route exact path='/timer'><Timer /></Route>
+      <Route exact path="/history"> <History /></Route>
+      <Route exact path="/update"> <Goal /></Route>
+      <Route exact path="/dashbord"> <Dashbord /></Route>
+      <Route exact path="/test"> <Test /></Route>
       <Route ><NotFound /></Route>
       </Switch>
     </div>

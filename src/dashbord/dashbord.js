@@ -68,7 +68,7 @@ class Dashbord extends Component {
               <span className="text-white mr-2">
                   {/* <i className="fa fa-arrow-down"></i> */}
                    <span className="font-weight-bold">
-                          {distance?Number((distance).toFixed(2)):0}KM</span>
+                          {distance?Number((distance).toFixed(2)):0} km</span>
                   
                 </span>
             </div>
@@ -79,7 +79,7 @@ class Dashbord extends Component {
               <span className="text-white mr-2">
                   {/* <i className="fa fa-arrow-up"></i>  */}
                   <span className="font-weight-bold">
-                  {duration?Number((duration).toFixed(2)):0} Hr</span>
+                  {duration?Number((duration).toFixed(2)):0} h</span>
                 </span>
 
             </div>
@@ -135,7 +135,7 @@ class Dashbord extends Component {
             <div className="pt-3 pb-3 text-center card text-white shadow-sm container rounded-lg bg-gradient-primary" style={{'borderBottom':'5px solid 2dce89'}}>
               <span><span className="font-weight-bold">Calores Burnt</span><i className="ml-3 fas fa-dumbbell  "></i></span>
              <span>
-                          <span className="font-weight-bold">{calores?Math.round(calores):0}</span><span className='text-muted'> / 800</span>
+                          <span className="font-weight-bold">{calores?Math.round(calores):0}</span><span className='text-muted'> / 800 </span> kcal
               </span>
             </div>
           </div>
@@ -143,7 +143,7 @@ class Dashbord extends Component {
           <div className="pt-3 pb-3 text-center card shadow-sm container mb-3 rounded-lg bg-gradient-default text-white" style={{'borderBottom':'5px solid 79d70f'}}>
           <span><span className="font-weight-bold">Average Speed</span><i className="fas fa-tachometer-slowest"></i></span>
               
-              <div className="font-weight-bold">{avgSpeed?Number((avgSpeed).toFixed(2)):0} Km/hr</div>             
+              <div className="font-weight-bold">{avgSpeed?Number((avgSpeed).toFixed(2)):0} km/h</div>             
             </div>
                             
           </div>

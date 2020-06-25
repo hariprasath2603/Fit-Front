@@ -169,13 +169,13 @@ constructor(){
                 </div>
                 <div id="distance" className="card mt-3 p-3 col-sm-12  pt-lg-5 " style={{'border-bottom':'5px solid #f7b924'}}>
                     <h3>Distance</h3>
-                    <p className="font-weight-bold">{Number((this.state.distance).toFixed(2))} KM</p>
+                    <p className="font-weight-bold">{Number((this.state.distance).toFixed(2))} km</p>
                 </div>
                 
                 
                 <div id="speed" className="card mt-3 p-3 col-sm-12 pt-lg-5" style={{'border-bottom':'5px solid #d92550'}}>
                     <h3>Average Speed</h3>
-                    <p className="font-weight-bold">{Number((this.state.avgSpeed).toFixed(2))} km/hr</p>
+                    <p className="font-weight-bold">{Number((this.state.avgSpeed).toFixed(2))} km/h</p>
                 </div>
 
                {/* <img src={this.state.img} width="70px" height="70px" onClick={this.toggelImg}alt="Play" className="mb-3"/> */}

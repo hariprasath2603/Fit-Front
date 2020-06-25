@@ -29,8 +29,8 @@ const Goal = () => {
             <h3 className="mt-3 mb-3 display-5">Update</h3>
 
            <div class="form-group input-group">
-               <label className="displayBlock form-control bg-secondary">Distance in Km</label>
-            <input type="text" class="form-control"  placeholder="Distance in Km"   id="distance" aria-label="Text input with dropdown button" />
+               <label className="displayBlock form-control bg-secondary">Distance in km</label>
+            <input type="text" class="form-control"  placeholder="   Distance in km"   id="distance" aria-label="Text input with dropdown button" />
             {/* <div class="input-group-append">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropDist">Distance</button>
                 <div class="dropdown-menu">
@@ -41,8 +41,8 @@ const Goal = () => {
             </div>
 
             <div class="form-group input-group">
-            <label className="displayBlock form-control bg-secondary">Time in Hr</label>
-            <input type="text" class="form-control"  placeholder="Time in hours" id="duration" aria-label="Text input with dropdown button" />
+            <label className="displayBlock form-control bg-secondary">Time in Hours</label>
+            <input type="text" class="form-control"  placeholder="   Time in Hours" id="duration" aria-label="Text input with dropdown button" />
             {/* <div class="input-group-append">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropTime">     Time     </button>
                 <div class="dropdown-menu">
@@ -52,13 +52,13 @@ const Goal = () => {
             </div> */}
             </div>
             <div class="form-group input-group">
-            <label className="displayBlock form-control bg-secondary">Weight in Kg</label>
-            <input type="text" class="form-control"  placeholder="Weigh in Kg" id="weight" aria-label="Text input with dropdown button" />
+            <label className="displayBlock form-control bg-secondary">Weight in kg</label>
+            <input type="text" class="form-control"  placeholder="   Weigh in kg" id="weight" aria-label="Text input with dropdown button" />
             </div>
 
             <div class="form-group input-group">
-            <label className="displayBlock form-control bg-secondary">Height in M</label>
-            <input type="text" class="form-control"  placeholder="Height in M" id="height" aria-label="Text input with dropdown button" />
+            <label className="displayBlock form-control bg-secondary">Height in Meter</label>
+            <input type="text" class="form-control"  placeholder="   Height in m" id="height" aria-label="Text input with dropdown button" />
             </div>
 
             <div className="btn btn-primary mb-4" onClick={update}>Update</div>

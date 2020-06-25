@@ -42,11 +42,22 @@ import './nac.css';
 
 class NavBar extends Component {
   state = {  }
+ 
+ 
+ 
+  componentDidMount() {
+    document.addEventListener('mousedown', this.closeNav);
+}
+
+componentWillUnmount() {
+    document.removeEventListener('mousedown', this.closeNav);
+}
   logout=()=>{
     localStorage.removeItem('access_token')
     this.closeNav()
     window.location.href='/login'
   }
+
    openNav() {
        console.log('called')
     document.getElementById("mySidenav").style.width = "250px";
@@ -121,14 +132,14 @@ class NavBar extends Component {
              <Link to="/timer" className={window.location.pathname==='/timer'?" active text-white":''} onClick={this.closeNav}><i className="fas fa-hourglass-start"></i><span className="col-6"> Timer </span></Link>
             </li>
             <li className={!localStorage.getItem('access_token')?'':'displayNone'}>
-                    <Link to="/login" className={window.location.pathname==='/login'?" active text-white":''} onClick={this.closeNav}><i className="fas fa-user"></i><span className="col-6"> Login </span></Link>
+                    <Link to="/login" className={window.location.pathname==='/login'?" active text-white":''} onClick={this.closeNav}><i className="fas fa-user"></i><span className="col-6"> LogIn </span></Link>
             </li>
             <li className={!localStorage.getItem('access_token')?'':'displayNone'}>
-                    <Link to="/signup" className={window.location.pathname==='/signup'?" active text-white":''} onClick={this.closeNav}> <i class="fas fa-user-plus"></i><span className="col-6"> SignUp </span></Link>
+                    <Link to="/signup" className={window.location.pathname==='/signup'?" active text-white":''} onClick={this.closeNav}> <i className="fas fa-user-plus"></i><span className="col-6"> SignUp </span></Link>
                     </li>
 
             <li className={localStorage.getItem('access_token')?'':'displayNone'}>
-                    <Link to="/login" className={window.location.pathname==='/logout'?" active text-white":''} onClick={this.logout}><i class="fas fa-sign-out-alt"></i><span className="col-6"> LogOut </span></Link>
+                    <Link to="/login" className={window.location.pathname==='/logout'?" active text-white":''} onClick={this.logout}><i className="fas fa-sign-out-alt"></i><span className="col-6"> LogOut </span></Link>
             </li>
 
             </ul>
@@ -138,7 +149,7 @@ class NavBar extends Component {
 <div className='row container '>
 <div style={{"fontSize":"30px","cursor":"pointer"}} className='bg-default text-white col' onClick={this.openNav}>&#9776; </div>
 <div style={{"fontSize":"30px"}} className='text-white   col-6 ' onClick={this.openNav}>Tilt-Fit  </div> 
-<div col='col'><Link to="/timer"><button className={" btn text-primary btn-white btn-sm" } style={{'marginTop':'10%'}}>Start trip</button></Link></div>
+<div col='col'><Link to="/timer"><button className={" btn text-primary btn-white btn-sm" } style={{'marginTop':'10%'}}>Start Trip</button></Link></div>
 </div>
 </div>
 </div>

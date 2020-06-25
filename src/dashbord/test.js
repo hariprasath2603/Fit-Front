@@ -66,7 +66,7 @@ gradient.addColorStop(1, 'rgba(58, 196, 125, 0)');
 var data  = {
   labels: [1,2,3,4,5,6,7,8,9,10,11,12],
 datasets: [{
-  label: 'Distance in Km ',
+  label: 'Distance in km ',
   backgroundColor: gradient,
   pointBackgroundColor: 'white',
   borderWidth: 4,

@@ -75,19 +75,7 @@ class History extends Component {
         return ( 
             <div className="container mt-2">
                 <h2>History</h2>
-                <table className='table table-responsive table-striped text-center mt-2'>
-                  <thead>
-                  <tr>
-                    <th>Trip Name</th>
-                    <th>Date</th>
-                    <th>Disatance</th>
-                    <th>Duration</th>
-                    <th>Average speed</th>
-                    <th>Calores burnt</th>
-                  </tr>
-                  </thead>
-                  <tbody className="">{this.state.trips.reverse().map(e=> <HistoryItem key={e.date} trip={e}/>)}</tbody>
-                </table>
+                  <div className="">{this.state.trips.reverse().map(e=> <HistoryItem key={e.date} trip={e}/>)}</div>
             </div>
          );
     }

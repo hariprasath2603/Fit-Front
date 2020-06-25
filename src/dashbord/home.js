@@ -8,16 +8,16 @@ class Home extends Component {
         return (  
             <div className="container">
                 <div className="jumbotron mt-2 text-center">
-                   <h4> Welcome to Tilt Fit</h4>
+                   <h4> Welcome to Tilt-Fit</h4>
                    {/* <a href="https://www.freevector.com/fun-bicycle-vector-30071#">FreeVector.com</a> */}
                    <img src={Cycle}  className='w-100 col-lg-6 ' alt="Bicycle"/>
-                        <div className="mt-5">Start your exciting cycling journey here...!!</div>
+                        <div className="mt-3 mb-2">Make your journey fit.</div>
                         <div>
 <Link to='/login'>            <div className="btn btn-outline-primary  ">
                         LogIn
                         </div></Link>
                         <Link to='/signup'>      <div className="btn btn-primary mt-1">
-                            SighUp
+                            SignUp
                         </div></Link>
                         </div>
                     </div>

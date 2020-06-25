@@ -6,15 +6,17 @@ const HistoryItem = (props) => {
     let disDate = new Date(date) 
     return ( 
         // <div className="row  hisItemwrap">
-        <tr >
-            <td className="tripName">{tripName}</td>
-            <td className="tripDate">{disDate.getMonth()+ " - " +disDate.getDay()+" - "+disDate.getFullYear()  }</td>
-            <td className="tripDist">{ Number((distance).toFixed(2)) + " Km"}</td>
-            <td className="tripTime ">{ Number((duration*60).toFixed(2)) + " Min"}</td>
-            <td className="">{avgSpeed?Number((avgSpeed).toFixed(2)):0 + " Km/Hr"}</td>
-            <td>{Math.round(calores) + " kcal"}</td>
-        </tr>
-        // {/* </div> */}
+
+        <div className="card container shadow-sm mb-2"> 
+
+                    <div><span className="card-title">Trip Name : </span><span className="tripName">{tripName}</span></div>
+                    <div><span className="card-title">Date : </span><span className="tripDate">{disDate.getMonth()+ " - " +disDate.getDay()+" - "+disDate.getFullYear()  }</span></div>
+                    <div><span className="card-title">Disatance : </span> <span className="tripDist">{ Number((distance).toFixed(2)) + " km"}</span></div>
+                    <div><span className="card-title">Duration : </span><span className="tripTime ">{ Number((duration*60).toFixed(2)) + " min"}</span></div>
+                    <div><span className="card-title">Average speed : </span><span className="">{avgSpeed?Number((avgSpeed).toFixed(2)):0 + " km/h"}</span></div>
+                    <div><span className="card-title">Calores burnt : </span>            <span>{Math.round(calores) + " kcal"}</span></div>
+        </div>
+                // {/* </div> */}
 
      );
 }

@@ -15,6 +15,7 @@ constructor(){
         seconds:0,
         distance:0,
         avgSpeed:0,
+        tripName:"Default trip",
         img:stop,
         location:[],
         id:''
@@ -29,10 +30,10 @@ constructor(){
     }
 
     onStop=(e)=>{
-        const {hour,minutes,seconds,distance} = this.state;
+        const {hour,minutes,seconds,distance,tripName} = this.state;
         const duration = hour + (minutes/60) + (seconds/3600);
         const avgSpeed =  Math.round(distance/duration);
-        const tripName = document.getElementById('tripName').value;
+        
       const   data = {
             Trip:{
             distance,
@@ -158,7 +159,7 @@ constructor(){
                 </div> */}
                 <div class="form-group input-group">
             <label className="displayBlock form-control bg-primary text-white">Trip Name</label>
-            <input type="text" class="form-control text-center"  value="Default trip" id="tripName" aria-label="Text input with dropdown button" />
+            <input type="text" class="form-control text-center"  value={this.state.tripName}  onChange={e=>{this.setState({tripName:e.target.value})}} id="tripName" aria-label="Text input with dropdown button" />
             </div>
             {/* <div className="continer " style={{"display":this.timerFunc?"None":"block"}}>
                 Allow location permission and enable GPS then refersh this page. 

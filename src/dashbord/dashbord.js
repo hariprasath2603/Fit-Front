@@ -45,9 +45,10 @@ class Dashbord extends Component {
     if(distance){
       console.log(goal)
       goalPercent =((parseInt(distance)/parseInt(goal.distance) * 100)+(parseInt(duration)/parseInt(goal.duration) * 100) )/2;
+      console.log(parseInt(distance),parseInt(goal.distance))
       goalPercent = goalPercent>100?100:goalPercent
       console.log(goalPercent)
-    }
+    } 
     return (
       <div className="container col-lg-4">
         <div className="row mt-3">
@@ -115,8 +116,10 @@ class Dashbord extends Component {
         <div className="row mt-2 ">
           <div className="col-12">
             <div className=" card shadow-sm rounded-lg pt-3 pb-3 text-center text-white container bg-gradient-green" style={{'borderBottom':'5px solid f5365c '}}>
-              <div className="font-weight-bold text-left">Daily goal</div>
+                          <div className="font-weight-bold text-left">Daily goal  -  {goalPercent}%</div>
+              
               <div className="progress mt-2">
+                
                 <div
                   className="progress-bar"
                   role="progressbar"

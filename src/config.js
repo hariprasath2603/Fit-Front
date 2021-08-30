@@ -1,5 +1,5 @@
 const variables = {
-    "baseURL":"http://localhost:3000"
+    "baseURL":"https://fit-temp-back.herokuapp.com/"
 }
 
 export default variables;

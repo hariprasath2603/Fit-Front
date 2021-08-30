@@ -1,5 +1,5 @@
 const variables = {
-    "baseURL":"https://limitless-dusk-77586.herokuapp.com"
+    "baseURL":"http://localhost:300"
 }
 
 export default variables;
